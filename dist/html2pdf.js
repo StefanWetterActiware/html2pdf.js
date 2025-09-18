@@ -5,14 +5,14 @@
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("jspdf"), require("html2canvas"));
+		module.exports = factory(require("jspdf"), require("html2canvas-pro"));
 	else if(typeof define === 'function' && define.amd)
-		define("html2pdf", ["jspdf", "html2canvas"], factory);
+		define("html2pdf", ["jspdf", "html2canvas-pro"], factory);
 	else if(typeof exports === 'object')
-		exports["html2pdf"] = factory(require("jspdf"), require("html2canvas"));
+		exports["html2pdf"] = factory(require("jspdf"), require("html2canvas-pro"));
 	else
-		root["html2pdf"] = factory(root["jspdf"], root["html2canvas"]);
-})(self, function(__WEBPACK_EXTERNAL_MODULE_jspdf__, __WEBPACK_EXTERNAL_MODULE_html2canvas__) {
+		root["html2pdf"] = factory(root["jspdf"], root["html2canvas-pro"]);
+})(self, function(__WEBPACK_EXTERNAL_MODULE_jspdf__, __WEBPACK_EXTERNAL_MODULE_html2canvas_pro__) {
 return /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
@@ -9182,8 +9182,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_timers_js__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_timers_js__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! jspdf */ "jspdf");
 /* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(jspdf__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var html2canvas__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! html2canvas */ "html2canvas");
-/* harmony import */ var html2canvas__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(html2canvas__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var html2canvas_pro__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! html2canvas-pro */ "html2canvas-pro");
+/* harmony import */ var html2canvas_pro__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(html2canvas_pro__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _snapdom_clone_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./snapdom/clone.js */ "./src/snapdom/clone.js");
 /* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./utils.js */ "./src/utils.js");
 
@@ -9375,7 +9375,7 @@ Worker.prototype.toCanvas = function toCanvas() {
     // Handle old-fashioned 'onrendered' argument.
     var options = Object.assign({}, this.opt.html2canvas);
     delete options.onrendered;
-    return html2canvas__WEBPACK_IMPORTED_MODULE_15___default()(this.prop.container, options);
+    return html2canvas_pro__WEBPACK_IMPORTED_MODULE_15___default()(this.prop.container, options);
   }).then(function toCanvas_post(canvas) {
     // Handle old-fashioned 'onrendered' argument.
     var onRendered = this.opt.html2canvas.onrendered || function () {};
@@ -9704,13 +9704,13 @@ Worker.prototype.run = Worker.prototype.then;
 
 /***/ }),
 
-/***/ "html2canvas":
-/*!******************************!*\
-  !*** external "html2canvas" ***!
-  \******************************/
+/***/ "html2canvas-pro":
+/*!**********************************!*\
+  !*** external "html2canvas-pro" ***!
+  \**********************************/
 /***/ (function(module) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_html2canvas__;
+module.exports = __WEBPACK_EXTERNAL_MODULE_html2canvas_pro__;
 
 /***/ }),
 
@@ -9813,7 +9813,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @param {Element|string} source The source element or HTML string.
  * @param {Object=} opt An object of optional settings: 'margin', 'filename',
- *    'image' ('type' and 'quality'), and 'html2canvas' / 'jspdf', which are
+ *    'image' ('type' and 'quality'), and 'html2canvas-pro' / 'jspdf', which are
  *    sent as settings to their corresponding functions.
  */
 var html2pdf = function html2pdf(src, opt) {

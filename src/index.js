@@ -8,7 +8,7 @@ import './plugin/hyperlinks.js';
  *
  * @param {Element|string} source The source element or HTML string.
  * @param {Object=} opt An object of optional settings: 'margin', 'filename',
- *    'image' ('type' and 'quality'), and 'html2canvas' / 'jspdf', which are
+ *    'image' ('type' and 'quality'), and 'html2canvas-pro' / 'jspdf', which are
  *    sent as settings to their corresponding functions.
  */
 var html2pdf = function html2pdf(src, opt) {
